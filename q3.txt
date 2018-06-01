@@ -1,0 +1,33 @@
+class Cop:
+    def __init__(self, name, age, workEx, desig):
+        self.name = name
+        self.age = age
+        self.workEx = workEx
+        self.desig = desig
+
+    def display(self):
+        print('Name: {}, Age: {}, Work Experience: {}, Designation:{}'.\
+              format(self.name, self.age, self.workEx, self.desig))
+    def update(self):
+        self.name = 'ray'
+        self.age = 35
+        self.workEx = '7 yrs'
+        self.desig = 'detective'
+        print('Name: {}, Age: {}, Work Experience: {}, Designation:{}'.\
+              format(self.name, self.age, self.workEx, self.desig))
+
+class Mission(Cop):
+    def add_mission_details(self):
+        print(" Ready for Mission")
+
+c = Cop('sam' , 30, '3 yrs', 'cop trainee')
+m = Mission('tom', 20, '3 yrs', 'trainee')
+m.display()
+m.add_mission_details()
+m.update()
+m.add_mission_details()
+output:
+Name: tom, Age: 20, Work Experience: 3 yrs, Designation:trainee
+ Ready for Mission
+Name: ray, Age: 35, Work Experience: 7 yrs, Designation:detective
+ Ready for Mission

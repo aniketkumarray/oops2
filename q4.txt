@@ -1,0 +1,30 @@
+class Shape:
+    def __init__(self, length, breadth):
+        self.length = length
+        self.breadth = breadth
+    def Area(self):
+        print(self.breadth * self.length)
+
+class Rectangle(Shape):
+    pass
+
+class Square(Shape):
+    def __init__(self, side):
+        Shape.__init__(self, side, side)
+        self.side = side
+
+num = int(input("Enter the side"))
+l = int(input("Enter the length"))
+b = int(input("Enter the breadth"))
+s = Square(num)
+a = Rectangle(l, b)
+a.Area()
+s.Area()
+
+output:
+
+Enter the side5
+Enter the length4
+Enter the breadth2
+8
+25
